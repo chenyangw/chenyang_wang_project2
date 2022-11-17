@@ -21,6 +21,11 @@ function GameOver() {
       {gameOver.guessedWord && (
         <h3>You guessed in {currentAttempt.attempt} attempts</h3>
       )}
+      <h3>
+        <button onClick={() => window.location.reload(false)}>
+          Start New Game
+        </button>
+      </h3>
     </div>
   );
 }
