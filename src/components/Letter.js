@@ -16,7 +16,7 @@ function Letter({ letterPosition, attemptValue }) {
     !correct && letter !== "" && correctWord.toUpperCase().includes(letter);
   const letterState =
     currentAttempt.attempt > attemptValue &&
-    (correct ? "correct" : exist ? "exist" : "error");
+    (correct ? "correct" : exist ? "present" : "absent");
 
   useEffect(() => {
     if (letter !== "" && !correct && !exist) {

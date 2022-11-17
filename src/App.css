@@ -43,10 +43,11 @@ li a:hover:not(.active) {
   background-color: #04aa6d;
 }
 
-h1 {
-  margin: 0;
-  font-size: 45px;
+h1,
+h2,
+h3 {
   color: #ffffff;
+  text-align: center;
 }
 
 .game {
@@ -96,18 +97,6 @@ h1 {
   text-transform: uppercase;
 }
 
-#correct {
-  background-color: #538d4e;
-}
-
-#exist {
-  background-color: #b59f3b;
-}
-
-#error {
-  background-color: #3a3a3c;
-}
-
 .keyboard {
   width: 430px;
   height: 200px;
@@ -146,4 +135,26 @@ h1 {
 }
 #absent {
   background-color: #aa3a3c;
+}
+
+.example {
+  height: 30px;
+  width: 30px;
+  padding-top: 1px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  vertical-align: middle;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.instruction {
+  max-width: 500px;
+  position: absolute;
+  left: 25%;
+  right: 25%;
 }
