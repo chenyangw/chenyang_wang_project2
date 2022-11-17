@@ -1,17 +1,24 @@
 import "./App.css";
 import Board from "./components/Board";
+import BoardHard from "./components/BoardHard";
 import Keyboard from "./components/Keyboard";
-import { boardDefault, generateWordSet } from "./Words";
+import { boardDefault, generateWordSet } from "./components/Words";
+import { boardHardDefault, generateWordSet7 } from "./components/WordsHard";
 import React, { useState, createContext, useEffect } from "react";
 import GameOver from "./components/GameOver";
+import { useParams, Link } from "react-router-dom";
 
 export const AppContext = createContext();
 
 function App() {
-  const difficulty = 6;
-  const maxAttempts = 6;
+  const { gameDifficulty } = useParams();
+  const isHard = gameDifficulty === "hard" ? true : false;
 
-  const [board, setBoard] = useState(boardDefault);
+  const difficulty = isHard ? 7 : 6;
+  const maxAttempts = isHard ? 5 : 6;
+  console.log(difficulty, maxAttempts);
+
+  const [board, setBoard] = useState(isHard ? boardHardDefault : boardDefault);
   const [currentAttempt, setCurrentAttempt] = useState({
     attempt: 0,
     letter: 0,
@@ -27,11 +34,19 @@ function App() {
   });
 
   useEffect(() => {
-    generateWordSet().then((words) => {
-      setWordSet(words.wordSet);
-      setCorrectWord(words.wordOfTheDay);
-    });
+    if (isHard) {
+      generateWordSet7().then((words) => {
+        setWordSet(words.wordSet);
+        setCorrectWord(words.wordOfTheDay);
+      });
+    } else {
+      generateWordSet().then((words) => {
+        setWordSet(words.wordSet);
+        setCorrectWord(words.wordOfTheDay);
+      });
+    }
   }, []);
+  console.log("today's word: ", correctWord);
 
   const onEnter = () => {
     if (currentAttempt.letter !== difficulty) {
@@ -82,11 +97,17 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <h1>Wordle</h1>
+        <ul>
+          <li>
+            <Link to="/">Back to Home</Link>
+          </li>
+        </ul>
       </nav>
 
+      <h3>Difficulty: {gameDifficulty}</h3>
       <AppContext.Provider
         value={{
+          isHard,
           board,
           setBoard,
           currentAttempt,
@@ -105,7 +126,7 @@ function App() {
         }}
       >
         <div className="game">
-          <Board />
+          {isHard ? <BoardHard /> : <Board />}
           {gameOver.gameOver ? <GameOver /> : <Keyboard />}
         </div>
       </AppContext.Provider>

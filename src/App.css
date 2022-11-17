@@ -12,15 +12,38 @@ body {
   color: aliceblue;
 }
 
-nav {
-  height: 60px;
-  width: 100%;
+ul {
+  list-style-type: none;
   margin: 0;
-  display: grid;
-  place-items: center;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
-nav h1 {
+li {
+  float: left;
+}
+
+li .float {
+  float: right;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04aa6d;
+}
+
+h1 {
   margin: 0;
   font-size: 45px;
   color: #ffffff;
@@ -42,6 +65,11 @@ nav h1 {
   justify-content: center;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.hard {
+  width: 420px;
+  height: 350px;
 }
 
 .row {
