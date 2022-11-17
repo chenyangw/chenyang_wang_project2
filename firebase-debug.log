@@ -1,0 +1,66 @@
+[debug] [2022-11-17T06:35:08.661Z] ----------------------------------------------------------------------
+[debug] [2022-11-17T06:35:08.663Z] Command:       /opt/homebrew/Cellar/node/19.0.1/bin/node /opt/homebrew/bin/firebase init
+[debug] [2022-11-17T06:35:08.663Z] CLI Version:   11.16.1
+[debug] [2022-11-17T06:35:08.663Z] Platform:      darwin
+[debug] [2022-11-17T06:35:08.663Z] Node Version:  v19.0.1
+[debug] [2022-11-17T06:35:08.664Z] Time:          Wed Nov 16 2022 22:35:08 GMT-0800 (Pacific Standard Time)
+[debug] [2022-11-17T06:35:08.664Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-17T06:35:08.692Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-17T06:35:08.692Z] > authorizing via signed-in user (chenyang.wang1021@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/wang/Library/Mobile Documents/com~apple~CloudDocs/Documents/00NEU/2022AU CS5610 webdev/assignments/chenyang_wang_project2
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-11-17T06:35:20.877Z] Using project from CLI flag: wordle-7f620
+[debug] [2022-11-17T06:35:20.881Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/wordle-7f620 [none]
+[debug] [2022-11-17T06:35:21.055Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/wordle-7f620 200
+[debug] [2022-11-17T06:35:21.056Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/wordle-7f620 {"projectId":"wordle-7f620","projectNumber":"564920700750","displayName":"Wordle","name":"projects/wordle-7f620","resources":{"hostingSite":"wordle-7f620","realtimeDatabaseInstance":"wordle-7f620-default-rtdb"},"state":"ACTIVE","etag":"1_8a1081eb-4032-40ce-8555-9175b74e0c4b"}
+[info] i  Using project wordle-7f620 (Wordle) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-11-17T06:35:46.709Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-11-17T06:35:46.745Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-11-17T06:35:46.745Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.14.0","browserURL":"https://www.gstatic.com/firebasejs/9.14.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.14.0/firebase.tgz"},"live":{"version":"9.14","browserURL":"https://www.gstatic.com/firebasejs/live/9.14/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.14/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.14.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.14.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.14.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.14.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.14.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.14.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.14.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.14.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /Users/wang/Library/Mobile Documents/com~apple~CloudDocs/Documents/00NEU/2022AU CS5610 webdev/assignments/chenyang_wang_project2 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=211013473&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-11-17T06:36:01.960Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-11-17T06:36:01.960Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-11-17T06:36:02.330Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-11-17T06:36:02.330Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-11-17T06:36:02.343Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-11-17T06:36:02.723Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-11-17T06:36:02.723Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"chenyangw","id":3349539,"node_id":"MDQ6VXNlcjMzNDk1Mzk=","avatar_url":"https://avatars.githubusercontent.com/u/3349539?v=4","gravatar_id":"","url":"https://api.github.com/users/chenyangw","html_url":"https://github.com/chenyangw","followers_url":"https://api.github.com/users/chenyangw/followers","following_url":"https://api.github.com/users/chenyangw/following{/other_user}","gists_url":"https://api.github.com/users/chenyangw/gists{/gist_id}","starred_url":"https://api.github.com/users/chenyangw/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/chenyangw/subscriptions","organizations_url":"https://api.github.com/users/chenyangw/orgs","repos_url":"https://api.github.com/users/chenyangw/repos","events_url":"https://api.github.com/users/chenyangw/events{/privacy}","received_events_url":"https://api.github.com/users/chenyangw/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":8,"public_gists":0,"followers":0,"following":0,"created_at":"2013-01-23T07:37:10Z","updated_at":"2022-11-07T12:23:38Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":26959,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as chenyangw 
+[info] 
