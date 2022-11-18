@@ -4590,6 +4590,11 @@
     "eslint-plugin-react-hooks" "^4.3.0"
     "eslint-plugin-testing-library" "^5.0.1"
 
+"eslint-config-react@^1.1.7":
+  "integrity" "sha512-P4Z6u68wf0BvIvZNu+U8uQsk3DcZ1CcCI1XpUkJlG6vOa+iVcSQLgE01f2DB2kXlKRcT8/3dsH+wveLgvEgbkQ=="
+  "resolved" "https://registry.npmjs.org/eslint-config-react/-/eslint-config-react-1.1.7.tgz"
+  "version" "1.1.7"
+
 "eslint-import-resolver-node@^0.3.6":
   "integrity" "sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw=="
   "resolved" "https://registry.npmjs.org/eslint-import-resolver-node/-/eslint-import-resolver-node-0.3.6.tgz"

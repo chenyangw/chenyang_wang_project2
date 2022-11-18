@@ -41,18 +41,20 @@ function Home() {
           The color of the tiles will change to show how close your guess was to
           the word.
         </p>
-        <div className="example" id="correct">
-          A
+        <div className="container">
+          <div className="letter example" id="correct">
+            A
+          </div>
+          <div>shows letter in the correct spot.</div>
+          <div className="letter example" id="present">
+            A
+          </div>
+          <div>shows letter exist in the word but in the wrong spot.</div>
+          <div className="letter example" id="absent">
+            A
+          </div>
+          <div>shows letter not exist in any spot.</div>
         </div>
-        <p>shows letter in the correct spot.</p>
-        <div className="example" id="present">
-          A
-        </div>
-        <p>shows letter exist in the word but in the wrong spot.</p>{" "}
-        <div className="example" id="absent">
-          A
-        </div>
-        <p>shows letter not exist in any spot.</p>
       </div>
     </div>
   );
